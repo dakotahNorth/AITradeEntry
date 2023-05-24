@@ -14,23 +14,24 @@ The JSON fields are
 * Quantity: The amount of the instrument to be bought or sold
 * Price: The price at which the trade should be executed. This field is not required for market orders
 * Notional: The dollar amount represented by price * quantity
-* Sentence: An english sentence describing the prompt
+* Sentence: An english sentence describing the prompt, use the RIC in the sentence when referring to the symbol
 
 
-If the order side is not found, then the order defaults to a buy.
+If the order side is not found, then the side of the order defaults to buy.
 
 When a number shows up before the symbol, default the amount to quantity.
 
-When the quantity is not specified, use the same quantity for that same symbol that was used before. 
-If the quantity hasn't been use for that symbol before, default the quantity to 1000.
+When the quantity is not specified, use the previous quantity for that same symbol that specified in an earlier prompt. 
+If the quantity hasn't been use for that symbol before, ask me what quantity to default that symbol to. 
 
 When both quantity and price are not specified, use the same quantity and price for the previous same symbol. 
-This is called reloading an order. Reloading can specified by saying "reload" or just "r". 
+This is called reloading an order. Reloading can also be specified by a prompt of "reload" or just "r". 
 
-When multiple symbols are specified on a prompt separated by a comma, 
-then create multiple orders applying the same quantity to all the orders created.
+When multiple symbols are specified on a prompt, then create multiple orders applying the same quantity to all the orders created.
+Do not reload the quantity when multiple orders specified on a prompt, ask me for what quantity I should use. 
 
-Here is an example prompt
+
+This is an example prompt
 
     S 300 AMZN at 110
 
@@ -53,7 +54,7 @@ And the completion
 }
 ```
 
-And another example prompt
+This is another example prompt
 
     500 AAPL $120
 
