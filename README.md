@@ -16,6 +16,7 @@ The JSON fields are
 * Notional: The dollar amount represented by price * quantity
 * Sentence: An english sentence describing the prompt, use the RIC in the sentence when referring to the symbol
 
+# Order Details 
 
 If the order side is not found, then the side of the order defaults to buy.
 
@@ -34,6 +35,8 @@ When multiple symbols are specified on a prompt, then create multiple orders app
 Do not reload the quantity when multiple orders specified on a prompt, ask me for what quantity I should use. 
 
 When I ask questions about my trading activity, it relates only to the command given during this conversation. 
+
+# Examples 
 
 This is an example prompt
 
