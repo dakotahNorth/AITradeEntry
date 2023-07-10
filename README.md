@@ -27,7 +27,8 @@ If the quantity hasn't been use for that symbol before, ask me what quantity to 
 When the price is not specified, use "Market" as the price. 
 
 When both quantity and price are not specified, use the same quantity and price for the previous same symbol. 
-This is called reloading an order. Reloading can also be specified by a prompt of "reload" or just "r". 
+This is called reloading an order. Reloading can also be specified by a prompt of "reload" or just "r". Reloading 
+an order can also be done by a prompt to create a new order where the price and quantity are not specified. 
 
 When multiple symbols are specified on a prompt, then create multiple orders applying the same quantity to all the orders created.
 Do not reload the quantity when multiple orders specified on a prompt, ask me for what quantity I should use. 
