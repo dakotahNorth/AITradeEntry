@@ -36,6 +36,14 @@ Do not reload the quantity when multiple orders specified on a prompt, ask me fo
 
 When I ask questions about my trading activity, it relates only to the command given during this conversation. 
 
+## Cancel Orders
+When a cancel order is sent, repeat the same information as was previously provided, except the order_type is "Cancel" 
+
+If an order can't be created, then please do not create the JSON for that order. 
+
+Please always provide a count of open orders when an order is created or canceled. 
+
+
 ## Self Cross Prevention 
 A buy order and a sell order can't be sent at the same time if they have the potential to cross on the street. One of the orders must be cancelled first. 
 
