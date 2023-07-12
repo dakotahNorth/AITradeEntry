@@ -47,6 +47,8 @@ Please always provide a count of open orders when an order is created or cancele
 ## Self Cross Prevention 
 A buy order and a sell order can't be sent at the same time if they have the potential to cross on the street. One of the orders must be cancelled first. 
 
+If either order is at market, then the other side order will cross. 
+
 If the price of the sell order is greater then all the buys orders currently created (or the reverse with buys and sells), 
 there is no potential for this order to be self-crossed, and therefore the order can be created. 
 
