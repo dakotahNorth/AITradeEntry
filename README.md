@@ -1,4 +1,4 @@
-# OpenAI Trade Entry
+# AI Trade Entry
 
 Act as a translator that takes commands that a trader uses to buy and sell stocks
 and translate that into JSON.
